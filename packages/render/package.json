@@ -1,0 +1,37 @@
+{
+	"name": "@buchida/render",
+	"version": "0.1.0",
+	"description": "Server-side render React email components to HTML and plain text",
+	"type": "module",
+	"main": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.js"
+		}
+	},
+	"scripts": {
+		"build": "tsc",
+		"test": "vitest run",
+		"test:watch": "vitest",
+		"clean": "rm -rf dist"
+	},
+	"dependencies": {
+		"react": "^19.0.0",
+		"react-dom": "^19.0.0"
+	},
+	"devDependencies": {
+		"@buchida/email": "workspace:*",
+		"@buchida/cjk-components": "workspace:*",
+		"@types/react": "^19.0.0",
+		"@types/react-dom": "^19.0.0",
+		"vitest": "^3.0.0"
+	},
+	"peerDependencies": {
+		"react": "^19.0.0",
+		"react-dom": "^19.0.0"
+	},
+	"files": ["dist"],
+	"license": "MIT"
+}

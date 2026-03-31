@@ -1,0 +1,22 @@
+{
+	"name": "@buchida/email-workspace",
+	"private": true,
+	"packageManager": "pnpm@10.31.0",
+	"type": "module",
+	"scripts": {
+		"build": "turbo run build",
+		"test": "turbo run test",
+		"dev": "turbo run dev",
+		"lint": "biome check .",
+		"lint:fix": "biome check --write .",
+		"clean": "turbo run clean"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^1.9.0",
+		"turbo": "^2.3.0",
+		"typescript": "^5.7.0"
+	},
+	"pnpm": {
+		"onlyBuiltDependencies": ["@biomejs/biome", "esbuild"]
+	}
+}

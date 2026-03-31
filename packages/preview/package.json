@@ -1,0 +1,34 @@
+{
+	"name": "@buchida/preview",
+	"version": "0.1.0",
+	"description": "Local preview server for buchida email templates",
+	"type": "module",
+	"main": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"bin": {
+		"buchida-preview": "./dist/cli.js"
+	},
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.js"
+		}
+	},
+	"scripts": {
+		"build": "tsc",
+		"dev": "node --watch dist/cli.js",
+		"clean": "rm -rf dist"
+	},
+	"dependencies": {
+		"@buchida/render": "workspace:*",
+		"react": "^19.0.0",
+		"react-dom": "^19.0.0"
+	},
+	"devDependencies": {
+		"@types/node": "^22.0.0",
+		"@types/react": "^19.0.0",
+		"@types/react-dom": "^19.0.0"
+	},
+	"files": ["dist"],
+	"license": "MIT"
+}
