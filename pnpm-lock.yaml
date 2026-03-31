@@ -131,7 +131,157 @@ importers:
         specifier: ^3.0.0
         version: 3.2.4(@types/node@22.19.15)
 
+  templates/password-reset-ja:
+    dependencies:
+      '@buchida/cjk-components':
+        specifier: workspace:*
+        version: link:../../packages/cjk-components
+      '@buchida/email':
+        specifier: workspace:*
+        version: link:../../packages/buchida-email
+      react:
+        specifier: ^19.0.0
+        version: 19.2.4
+    devDependencies:
+      '@buchida/render':
+        specifier: workspace:*
+        version: link:../../packages/render
+      '@types/react':
+        specifier: ^19.0.0
+        version: 19.2.14
+      react-dom:
+        specifier: ^19.0.0
+        version: 19.2.4(react@19.2.4)
+      vitest:
+        specifier: ^3.0.0
+        version: 3.2.4(@types/node@22.19.15)
+
+  templates/password-reset-ko:
+    dependencies:
+      '@buchida/cjk-components':
+        specifier: workspace:*
+        version: link:../../packages/cjk-components
+      '@buchida/email':
+        specifier: workspace:*
+        version: link:../../packages/buchida-email
+      react:
+        specifier: ^19.0.0
+        version: 19.2.4
+    devDependencies:
+      '@buchida/render':
+        specifier: workspace:*
+        version: link:../../packages/render
+      '@types/react':
+        specifier: ^19.0.0
+        version: 19.2.14
+      react-dom:
+        specifier: ^19.0.0
+        version: 19.2.4(react@19.2.4)
+      vitest:
+        specifier: ^3.0.0
+        version: 3.2.4(@types/node@22.19.15)
+
+  templates/password-reset-zh:
+    dependencies:
+      '@buchida/cjk-components':
+        specifier: workspace:*
+        version: link:../../packages/cjk-components
+      '@buchida/email':
+        specifier: workspace:*
+        version: link:../../packages/buchida-email
+      react:
+        specifier: ^19.0.0
+        version: 19.2.4
+    devDependencies:
+      '@buchida/render':
+        specifier: workspace:*
+        version: link:../../packages/render
+      '@types/react':
+        specifier: ^19.0.0
+        version: 19.2.14
+      react-dom:
+        specifier: ^19.0.0
+        version: 19.2.4(react@19.2.4)
+      vitest:
+        specifier: ^3.0.0
+        version: 3.2.4(@types/node@22.19.15)
+
   templates/receipt-ko:
+    dependencies:
+      '@buchida/cjk-components':
+        specifier: workspace:*
+        version: link:../../packages/cjk-components
+      '@buchida/email':
+        specifier: workspace:*
+        version: link:../../packages/buchida-email
+      react:
+        specifier: ^19.0.0
+        version: 19.2.4
+    devDependencies:
+      '@buchida/render':
+        specifier: workspace:*
+        version: link:../../packages/render
+      '@types/react':
+        specifier: ^19.0.0
+        version: 19.2.14
+      react-dom:
+        specifier: ^19.0.0
+        version: 19.2.4(react@19.2.4)
+      vitest:
+        specifier: ^3.0.0
+        version: 3.2.4(@types/node@22.19.15)
+
+  templates/shipping-ja:
+    dependencies:
+      '@buchida/cjk-components':
+        specifier: workspace:*
+        version: link:../../packages/cjk-components
+      '@buchida/email':
+        specifier: workspace:*
+        version: link:../../packages/buchida-email
+      react:
+        specifier: ^19.0.0
+        version: 19.2.4
+    devDependencies:
+      '@buchida/render':
+        specifier: workspace:*
+        version: link:../../packages/render
+      '@types/react':
+        specifier: ^19.0.0
+        version: 19.2.14
+      react-dom:
+        specifier: ^19.0.0
+        version: 19.2.4(react@19.2.4)
+      vitest:
+        specifier: ^3.0.0
+        version: 3.2.4(@types/node@22.19.15)
+
+  templates/shipping-ko:
+    dependencies:
+      '@buchida/cjk-components':
+        specifier: workspace:*
+        version: link:../../packages/cjk-components
+      '@buchida/email':
+        specifier: workspace:*
+        version: link:../../packages/buchida-email
+      react:
+        specifier: ^19.0.0
+        version: 19.2.4
+    devDependencies:
+      '@buchida/render':
+        specifier: workspace:*
+        version: link:../../packages/render
+      '@types/react':
+        specifier: ^19.0.0
+        version: 19.2.14
+      react-dom:
+        specifier: ^19.0.0
+        version: 19.2.4(react@19.2.4)
+      vitest:
+        specifier: ^3.0.0
+        version: 3.2.4(@types/node@22.19.15)
+
+  templates/shipping-zh:
     dependencies:
       '@buchida/cjk-components':
         specifier: workspace:*
