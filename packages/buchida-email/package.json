@@ -30,5 +30,15 @@
 		"react": "^19.0.0"
 	},
 	"files": ["dist"],
-	"license": "MIT"
+	"keywords": ["email", "buchida", "cjk", "react-email", "korean", "japanese", "chinese", "templates"],
+	"author": "buchida <hello@buchida.com>",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Vyblor/buchida-email.git"
+	},
+	"homepage": "https://buchida.com/docs/templates",
+	"engines": {
+		"node": ">=18.0.0"
+	}
 }
