@@ -1,5 +1,5 @@
-import { Body, Button, Container, Email, Head, Hr, Image, Preview } from "@buchida/email";
 import { CJKFont, CJKHeading, CJKText } from "@buchida/cjk-components";
+import { Body, Button, Container, Email, Head, Hr, Image, Preview } from "@buchida/email";
 
 export interface WelcomeJaProps {
 	name?: string;

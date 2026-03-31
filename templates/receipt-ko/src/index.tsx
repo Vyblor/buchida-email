@@ -1,3 +1,4 @@
+import { CJKFont, CJKHeading, CJKText, CompactSection } from "@buchida/cjk-components";
 import {
 	Body,
 	Column,
@@ -10,7 +11,6 @@ import {
 	Row,
 	Section,
 } from "@buchida/email";
-import { CJKFont, CJKHeading, CJKText, CompactSection } from "@buchida/cjk-components";
 
 export interface ReceiptItem {
 	name: string;
@@ -59,9 +59,7 @@ export default function ReceiptKo({
 					<CJKHeading locale="ko" as="h1">
 						결제 영수증
 					</CJKHeading>
-					<CJKText locale="ko">
-						{customerName}님, 결제해 주셔서 감사합니다.
-					</CJKText>
+					<CJKText locale="ko">{customerName}님, 결제해 주셔서 감사합니다.</CJKText>
 
 					<CompactSection>
 						<CJKText locale="ko" style={{ fontSize: "14px", color: "#666666", margin: "4px 0" }}>

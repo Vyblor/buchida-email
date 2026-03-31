@@ -1,5 +1,5 @@
-import { Body, Button, Container, Email, Head, Hr, Image, Preview } from "@buchida/email";
 import { CJKFont, CJKHeading, CJKText } from "@buchida/cjk-components";
+import { Body, Button, Container, Email, Head, Hr, Image, Preview } from "@buchida/email";
 
 export interface WelcomeKoProps {
 	name?: string;
@@ -30,8 +30,8 @@ export default function WelcomeKo({
 						{name}님, 환영합니다! 🎉
 					</CJKHeading>
 					<CJKText locale="ko">
-						buchida에 가입해 주셔서 감사합니다. 아시아 최고의 이메일 API 서비스로 이메일
-						전송을 시작하세요.
+						buchida에 가입해 주셔서 감사합니다. 아시아 최고의 이메일 API 서비스로 이메일 전송을
+						시작하세요.
 					</CJKText>
 					<CJKText locale="ko">
 						buchida는 한국어, 일본어, 중국어를 완벽하게 지원하는 개발자 친화적인 이메일

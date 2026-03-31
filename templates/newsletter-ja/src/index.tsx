@@ -1,5 +1,5 @@
-import { Body, Button, Container, Email, Head, Hr, Image, Link, Preview } from "@buchida/email";
 import { CJKFont, CJKHeading, CJKText, CompactSection } from "@buchida/cjk-components";
+import { Body, Button, Container, Email, Head, Hr, Image, Link, Preview } from "@buchida/email";
 
 export interface NewsletterArticle {
 	title: string;
@@ -26,8 +26,7 @@ export default function NewsletterJa({
 		},
 		{
 			title: "CJKメールテンプレートのベストプラクティス",
-			summary:
-				"日本語、韓国語、中国語のメールを美しく表示するためのガイドラインをご紹介します。",
+			summary: "日本語、韓国語、中国語のメールを美しく表示するためのガイドラインをご紹介します。",
 			url: "https://buchida.com/blog/cjk-best-practices",
 		},
 	],

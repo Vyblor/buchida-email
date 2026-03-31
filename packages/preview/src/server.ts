@@ -1,5 +1,5 @@
-import { createServer, type IncomingMessage, type ServerResponse } from "node:http";
 import { readdir, stat } from "node:fs/promises";
+import { type IncomingMessage, type ServerResponse, createServer } from "node:http";
 import { join, resolve } from "node:path";
 
 export interface PreviewServerOptions {

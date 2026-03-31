@@ -1,6 +1,6 @@
-import { describe, expect, it } from "vitest";
 import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
+import { describe, expect, it } from "vitest";
 import {
 	Body,
 	Button,
@@ -56,7 +56,7 @@ describe("Body", () => {
 describe("Container", () => {
 	it("renders a table with max-width", () => {
 		const html = render(createElement(Container, null, "content"));
-		expect(html).toContain("role=\"presentation\"");
+		expect(html).toContain('role="presentation"');
 		expect(html).toContain("max-width:600px");
 	});
 
@@ -68,8 +68,10 @@ describe("Container", () => {
 
 describe("Section", () => {
 	it("renders a presentation table", () => {
-		const html = render(createElement(Section, null, createElement("tr", null, createElement("td", null, "test"))));
-		expect(html).toContain("role=\"presentation\"");
+		const html = render(
+			createElement(Section, null, createElement("tr", null, createElement("td", null, "test"))),
+		);
+		expect(html).toContain('role="presentation"');
 		expect(html).toContain("width:100%");
 	});
 });
@@ -77,7 +79,11 @@ describe("Section", () => {
 describe("Row", () => {
 	it("renders a tr element", () => {
 		const html = render(
-			createElement("table", null, createElement("tbody", null, createElement(Row, null, createElement("td", null, "cell")))),
+			createElement(
+				"table",
+				null,
+				createElement("tbody", null, createElement(Row, null, createElement("td", null, "cell"))),
+			),
 		);
 		expect(html).toContain("<tr");
 		expect(html).toContain("cell");
@@ -87,7 +93,15 @@ describe("Row", () => {
 describe("Column", () => {
 	it("renders a td element with vertical-align top", () => {
 		const html = render(
-			createElement("table", null, createElement("tbody", null, createElement("tr", null, createElement(Column, null, "content")))),
+			createElement(
+				"table",
+				null,
+				createElement(
+					"tbody",
+					null,
+					createElement("tr", null, createElement(Column, null, "content")),
+				),
+			),
 		);
 		expect(html).toContain("<td");
 		expect(html).toContain("vertical-align:top");
@@ -126,7 +140,7 @@ describe("Heading", () => {
 describe("Button", () => {
 	it("renders a table-wrapped link", () => {
 		const html = render(createElement(Button, { href: "https://example.com" }, "Click"));
-		expect(html).toContain("role=\"presentation\"");
+		expect(html).toContain('role="presentation"');
 		expect(html).toContain('href="https://example.com"');
 		expect(html).toContain("Click");
 		expect(html).toContain("text-decoration:none");
@@ -144,7 +158,9 @@ describe("Link", () => {
 
 describe("Image", () => {
 	it("renders img with proper email attributes", () => {
-		const html = render(createElement(Image, { src: "https://example.com/img.png", alt: "test", width: 100 }));
+		const html = render(
+			createElement(Image, { src: "https://example.com/img.png", alt: "test", width: 100 }),
+		);
 		expect(html).toContain('src="https://example.com/img.png"');
 		expect(html).toContain('alt="test"');
 		expect(html).toContain("display:block");

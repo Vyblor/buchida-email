@@ -1,5 +1,5 @@
 import type { CSSProperties, ReactNode } from "react";
-import { CJK_LINE_HEIGHT, type CJKLocale, FONT_FAMILIES } from "../fonts.js";
+import { type CJKLocale, CJK_LINE_HEIGHT, FONT_FAMILIES } from "../fonts.js";
 
 export interface CJKTextProps {
 	children: ReactNode;
