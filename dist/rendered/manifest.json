@@ -1,0 +1,68 @@
+[
+  {
+    "slug": "welcome-ko",
+    "name": "Welcome - Korean",
+    "category": "transactional",
+    "locale": "ko"
+  },
+  {
+    "slug": "welcome-ja",
+    "name": "Welcome - Japanese",
+    "category": "transactional",
+    "locale": "ja"
+  },
+  {
+    "slug": "welcome-zh",
+    "name": "Welcome - Chinese",
+    "category": "transactional",
+    "locale": "zh"
+  },
+  {
+    "slug": "password-reset-ko",
+    "name": "Password Reset - Korean",
+    "category": "transactional",
+    "locale": "ko"
+  },
+  {
+    "slug": "password-reset-ja",
+    "name": "Password Reset - Japanese",
+    "category": "transactional",
+    "locale": "ja"
+  },
+  {
+    "slug": "password-reset-zh",
+    "name": "Password Reset - Chinese",
+    "category": "transactional",
+    "locale": "zh"
+  },
+  {
+    "slug": "receipt-ko",
+    "name": "Receipt - Korean",
+    "category": "transactional",
+    "locale": "ko"
+  },
+  {
+    "slug": "newsletter-ja",
+    "name": "Newsletter - Japanese",
+    "category": "marketing",
+    "locale": "ja"
+  },
+  {
+    "slug": "shipping-ko",
+    "name": "Shipping - Korean",
+    "category": "transactional",
+    "locale": "ko"
+  },
+  {
+    "slug": "shipping-ja",
+    "name": "Shipping - Japanese",
+    "category": "transactional",
+    "locale": "ja"
+  },
+  {
+    "slug": "shipping-zh",
+    "name": "Shipping - Chinese",
+    "category": "transactional",
+    "locale": "zh"
+  }
+]
