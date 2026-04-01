@@ -18,7 +18,7 @@ export default function PasswordResetJa({
 				<CJKFont locale="ja" />
 				<title>パスワードリセット</title>
 			</Head>
-			<Body style={{ backgroundColor: "#f9fafb" }}>
+			<Body style={{ backgroundColor: "#FFF8F0" }}>
 				<Preview text={`${name}様、buchidaのパスワードリセットのご依頼を承りました。`} />
 				<Container style={{ padding: "40px 20px" }}>
 					<Image

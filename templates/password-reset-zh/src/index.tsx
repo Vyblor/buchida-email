@@ -18,7 +18,7 @@ export default function PasswordResetZh({
 				<CJKFont locale="zh" />
 				<title>重置密码</title>
 			</Head>
-			<Body style={{ backgroundColor: "#f9fafb" }}>
+			<Body style={{ backgroundColor: "#FFF8F0" }}>
 				<Preview text={`${name}，您的buchida密码重置请求已收到。`} />
 				<Container style={{ padding: "40px 20px" }}>
 					<Image

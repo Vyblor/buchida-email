@@ -46,7 +46,7 @@ export default function ShippingZh({
 				<CJKFont locale="zh" />
 				<title>发货通知</title>
 			</Head>
-			<Body style={{ backgroundColor: "#f9fafb" }}>
+			<Body style={{ backgroundColor: "#FFF8F0" }}>
 				<Preview text={`${customerName}，您的订单已发货。`} />
 				<Container style={{ padding: "40px 20px" }}>
 					<Image
@@ -86,7 +86,7 @@ export default function ShippingZh({
 						订单商品
 					</CJKHeading>
 					<Section>
-						<Row style={{ backgroundColor: "#f3f4f6", padding: "8px 12px" }}>
+						<Row style={{ backgroundColor: "#FFF1F0", padding: "8px 12px" }}>
 							<Column width="70%">
 								<CJKText locale="zh" style={{ fontWeight: "bold", margin: 0, fontSize: "14px" }}>
 									商品名称

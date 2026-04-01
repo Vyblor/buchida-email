@@ -46,7 +46,7 @@ export default function ShippingKo({
 				<CJKFont locale="ko" />
 				<title>배송 알림</title>
 			</Head>
-			<Body style={{ backgroundColor: "#f9fafb" }}>
+			<Body style={{ backgroundColor: "#FFF8F0" }}>
 				<Preview text={`${customerName}님, 주문하신 상품이 발송되었습니다.`} />
 				<Container style={{ padding: "40px 20px" }}>
 					<Image
@@ -87,7 +87,7 @@ export default function ShippingKo({
 						주문 상품
 					</CJKHeading>
 					<Section>
-						<Row style={{ backgroundColor: "#f3f4f6", padding: "8px 12px" }}>
+						<Row style={{ backgroundColor: "#FFF1F0", padding: "8px 12px" }}>
 							<Column width="70%">
 								<CJKText locale="ko" style={{ fontWeight: "bold", margin: 0, fontSize: "14px" }}>
 									상품명

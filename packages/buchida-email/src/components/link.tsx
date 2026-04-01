@@ -11,7 +11,7 @@ export function Link({ href, children, style }: LinkProps) {
 		<a
 			href={href}
 			style={{
-				color: "#0066ff",
+				color: "#3B6EF9",
 				textDecoration: "underline",
 				...style,
 			}}

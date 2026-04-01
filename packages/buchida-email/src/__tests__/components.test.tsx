@@ -152,7 +152,7 @@ describe("Link", () => {
 		const html = render(createElement(Link, { href: "https://example.com" }, "link text"));
 		expect(html).toContain('href="https://example.com"');
 		expect(html).toContain("link text");
-		expect(html).toContain("color:#0066ff");
+		expect(html).toContain("color:#3B6EF9");
 	});
 });
 

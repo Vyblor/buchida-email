@@ -46,7 +46,7 @@ export default function ReceiptKo({
 				<CJKFont locale="ko" />
 				<title>buchida 결제 영수증</title>
 			</Head>
-			<Body style={{ backgroundColor: "#f9fafb" }}>
+			<Body style={{ backgroundColor: "#FFF8F0" }}>
 				<Preview text={`${customerName}님의 buchida 결제 영수증 - ${formatKRW(total)}`} />
 				<Container style={{ padding: "40px 20px" }}>
 					<Image
@@ -73,7 +73,7 @@ export default function ReceiptKo({
 					<Hr />
 
 					<Section>
-						<Row style={{ backgroundColor: "#f3f4f6", padding: "8px 12px" }}>
+						<Row style={{ backgroundColor: "#FFF1F0", padding: "8px 12px" }}>
 							<Column width="50%">
 								<CJKText locale="ko" style={{ fontWeight: "bold", margin: 0, fontSize: "14px" }}>
 									항목

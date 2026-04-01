@@ -38,7 +38,7 @@ export default function NewsletterJa({
 				<CJKFont locale="ja" />
 				<title>{`buchida ニュースレター #${issueNumber}`}</title>
 			</Head>
-			<Body style={{ backgroundColor: "#f9fafb" }}>
+			<Body style={{ backgroundColor: "#FFF8F0" }}>
 				<Preview text={`buchida ニュースレター #${issueNumber} - ${date}`} />
 				<Container style={{ padding: "40px 20px" }}>
 					<Image

@@ -16,7 +16,7 @@ export default function WelcomeKo({
 				<CJKFont locale="ko" />
 				<title>buchida에 오신 것을 환영합니다</title>
 			</Head>
-			<Body style={{ backgroundColor: "#f9fafb" }}>
+			<Body style={{ backgroundColor: "#FFF8F0" }}>
 				<Preview text={`${name}님, buchida에 오신 것을 환영합니다! 이메일 전송을 시작하세요.`} />
 				<Container style={{ padding: "40px 20px" }}>
 					<Image

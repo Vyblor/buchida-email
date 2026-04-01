@@ -14,7 +14,7 @@ export function Button({ href, children, style }: ButtonProps) {
 					<td
 						style={{
 							borderRadius: "6px",
-							backgroundColor: "#0066ff",
+							backgroundColor: "#3B6EF9",
 						}}
 					>
 						<a
@@ -27,7 +27,7 @@ export function Button({ href, children, style }: ButtonProps) {
 								color: "#ffffff",
 								textDecoration: "none",
 								borderRadius: "6px",
-								backgroundColor: "#0066ff",
+								backgroundColor: "#3B6EF9",
 								...style,
 							}}
 						>

@@ -16,7 +16,7 @@ export function TappableButton({ href, children, locale, style }: TappableButton
 					<td
 						style={{
 							borderRadius: "6px",
-							backgroundColor: "#0066ff",
+							backgroundColor: "#3B6EF9",
 						}}
 					>
 						<a
@@ -33,7 +33,7 @@ export function TappableButton({ href, children, locale, style }: TappableButton
 								color: "#ffffff",
 								textDecoration: "none",
 								borderRadius: "6px",
-								backgroundColor: "#0066ff",
+								backgroundColor: "#3B6EF9",
 								textAlign: "center",
 								lineHeight: "20px",
 								...style,

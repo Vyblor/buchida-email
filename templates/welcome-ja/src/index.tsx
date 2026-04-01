@@ -16,7 +16,7 @@ export default function WelcomeJa({
 				<CJKFont locale="ja" />
 				<title>buchidaへようこそ</title>
 			</Head>
-			<Body style={{ backgroundColor: "#f9fafb" }}>
+			<Body style={{ backgroundColor: "#FFF8F0" }}>
 				<Preview text={`${name}様、buchidaへようこそ！メール配信を始めましょう。`} />
 				<Container style={{ padding: "40px 20px" }}>
 					<Image

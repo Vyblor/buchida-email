@@ -18,7 +18,7 @@ export default function PasswordResetKo({
 				<CJKFont locale="ko" />
 				<title>비밀번호 재설정</title>
 			</Head>
-			<Body style={{ backgroundColor: "#f9fafb" }}>
+			<Body style={{ backgroundColor: "#FFF8F0" }}>
 				<Preview text={`${name}님, buchida 비밀번호 재설정 요청이 접수되었습니다.`} />
 				<Container style={{ padding: "40px 20px" }}>
 					<Image
