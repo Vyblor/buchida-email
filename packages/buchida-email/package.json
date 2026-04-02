@@ -1,6 +1,6 @@
 {
 	"name": "@buchida/email",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "CJK-first email components for building beautiful emails",
 	"type": "module",
 	"main": "./dist/index.js",
@@ -29,7 +29,7 @@
 	"peerDependencies": {
 		"react": "^19.0.0"
 	},
-	"files": ["dist"],
+	"files": ["dist", "README.md"],
 	"keywords": ["email", "buchida", "cjk", "react-email", "korean", "japanese", "chinese", "templates"],
 	"author": "buchida <hello@buchida.com>",
 	"license": "MIT",
