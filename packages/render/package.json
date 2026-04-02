@@ -32,6 +32,6 @@
 		"react": "^19.0.0",
 		"react-dom": "^19.0.0"
 	},
-	"files": ["dist"],
+	"files": ["dist", "README.md"],
 	"license": "MIT"
 }

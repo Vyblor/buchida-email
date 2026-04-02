@@ -64,5 +64,11 @@
     "name": "Shipping - Chinese",
     "category": "transactional",
     "locale": "zh"
+  },
+  {
+    "slug": "magic-link",
+    "name": "Magic Link - Multi-language",
+    "category": "transactional",
+    "locale": "all"
   }
 ]

@@ -22,6 +22,7 @@ import NewsletterJa from "../templates/newsletter-ja/src/index.js";
 import ShippingKo from "../templates/shipping-ko/src/index.js";
 import ShippingJa from "../templates/shipping-ja/src/index.js";
 import ShippingZh from "../templates/shipping-zh/src/index.js";
+import MagicLink from "../templates/magic-link/src/index.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const outDir = join(__dirname, "..", "dist", "rendered");
@@ -46,6 +47,7 @@ const templates: TemplateEntry[] = [
 	{ slug: "shipping-ko", name: "Shipping - Korean", category: "transactional", locale: "ko", element: React.createElement(ShippingKo) },
 	{ slug: "shipping-ja", name: "Shipping - Japanese", category: "transactional", locale: "ja", element: React.createElement(ShippingJa) },
 	{ slug: "shipping-zh", name: "Shipping - Chinese", category: "transactional", locale: "zh", element: React.createElement(ShippingZh) },
+	{ slug: "magic-link", name: "Magic Link - Multi-language", category: "transactional", locale: "all", element: React.createElement(MagicLink) },
 ];
 
 mkdirSync(outDir, { recursive: true });
