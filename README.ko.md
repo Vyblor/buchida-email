@@ -1,6 +1,6 @@
 <div align="center">
   <img src="assets/logo-black.svg" alt="buchida" width="280" />
-  <p><strong>CJK-first email components and templates</strong></p>
+  <p><strong>CJK 우선 이메일 컴포넌트 및 템플릿</strong></p>
 
   [English](README.md) | [한국어](README.ko.md) | [日本語](README.ja.md) | [中文](README.zh.md)
 
@@ -9,15 +9,15 @@
 
 ---
 
-React email components with first-class CJK (Korean, Japanese, Chinese) support. Build beautiful emails that render perfectly across all CJK email clients.
+CJK(한국어, 일본어, 중국어)를 기본 지원하는 React 이메일 컴포넌트입니다. 모든 CJK 이메일 클라이언트에서 완벽하게 렌더링되는 아름다운 이메일을 만드세요.
 
-## Installation
+## 설치
 
 ```bash
 npm install @buchida/email @buchida/cjk-components
 ```
 
-## Quick Start
+## 빠른 시작
 
 ```tsx
 import { Html, Head, Body, Container, Heading, Text, Button } from '@buchida/email';
@@ -47,7 +47,7 @@ export function WelcomeEmail({ name }: { name: string }) {
 }
 ```
 
-### Render to HTML
+### HTML로 렌더링
 
 ```ts
 import { render } from '@buchida/email-render';
@@ -56,30 +56,30 @@ import { WelcomeEmail } from './emails/welcome';
 const html = await render(WelcomeEmail({ name: '김민준' }));
 ```
 
-## Packages
+## 패키지
 
-| Package | Description |
-|---------|-------------|
-| `@buchida/email` | Core email components (Html, Head, Body, Container, Text, Button) |
-| `@buchida/cjk-components` | CJK-specific components (CJKText, CJKHeading, CJKFont) |
-| `@buchida/email-preview` | Local preview server with hot reload |
-| `@buchida/email-render` | Server-side render to HTML string |
+| 패키지 | 설명 |
+|--------|------|
+| `@buchida/email` | 핵심 이메일 컴포넌트 (Html, Head, Body, Container, Text, Button) |
+| `@buchida/cjk-components` | CJK 전용 컴포넌트 (CJKText, CJKHeading, CJKFont) |
+| `@buchida/email-preview` | 핫 리로드 지원 로컬 미리보기 서버 |
+| `@buchida/email-render` | 서버 사이드 HTML 문자열 렌더링 |
 
-## Supported Languages
+## 지원 언어
 
-| Language | Font Stack | `lang` value |
-|----------|-----------|-------------|
-| Korean | Noto Sans KR, Apple SD Gothic Neo, Malgun Gothic | `ko` |
-| Japanese | Noto Sans JP, Hiragino Sans, Yu Gothic, Meiryo | `ja` |
-| Chinese (Simplified) | Noto Sans SC, PingFang SC, Microsoft YaHei | `zh` |
-| Chinese (Traditional) | Noto Sans TC, PingFang TC, Microsoft JhengHei | `zh-TW` |
+| 언어 | 폰트 스택 | `lang` 값 |
+|------|-----------|-----------|
+| 한국어 | Noto Sans KR, Apple SD Gothic Neo, Malgun Gothic | `ko` |
+| 일본어 | Noto Sans JP, Hiragino Sans, Yu Gothic, Meiryo | `ja` |
+| 중국어 (간체) | Noto Sans SC, PingFang SC, Microsoft YaHei | `zh` |
+| 중국어 (번체) | Noto Sans TC, PingFang TC, Microsoft JhengHei | `zh-TW` |
 
-## Documentation
+## 문서
 
-- [Quick Start](https://buchida.com/docs/quickstart)
-- [CJK Templates Guide](https://buchida.com/docs/templates)
+- [빠른 시작 가이드](https://buchida.com/ko/docs/quickstart)
+- [CJK 템플릿 가이드](https://buchida.com/ko/docs/templates)
 - [GitHub](https://github.com/Vyblor/buchida-email)
 
-## License
+## 라이선스
 
 MIT
