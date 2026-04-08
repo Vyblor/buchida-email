@@ -4,9 +4,10 @@ export interface ContainerProps {
 	children: ReactNode;
 	style?: CSSProperties;
 	maxWidth?: number;
+	locale?: string;
 }
 
-export function Container({ children, style, maxWidth = 600 }: ContainerProps) {
+export function Container({ children, style, maxWidth = 600, locale }: ContainerProps) {
 	return (
 		<table
 			role="presentation"
@@ -18,6 +19,7 @@ export function Container({ children, style, maxWidth = 600 }: ContainerProps) {
 				margin: "0 auto",
 				...style,
 			}}
+			{...(locale ? { lang: locale } : {})}
 		>
 			<tbody>
 				<tr>

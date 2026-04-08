@@ -4,9 +4,20 @@ export interface TextProps {
 	children: ReactNode;
 	style?: CSSProperties;
 	as?: "p" | "span";
+	locale?: string;
 }
 
-export function Text({ children, style, as: Tag = "p" }: TextProps) {
+const CJK_FONT_MAP: Record<string, string> = {
+	ko: "'Noto Sans KR', sans-serif",
+	ja: "'Noto Sans JP', sans-serif",
+	zh: "'Noto Sans SC', sans-serif",
+};
+
+export function Text({ children, style, as: Tag = "p", locale }: TextProps) {
+	const cjkStyle = locale && CJK_FONT_MAP[locale]
+		? { fontFamily: CJK_FONT_MAP[locale], lineHeight: "1.8" }
+		: {};
+
 	return (
 		<Tag
 			style={{
@@ -14,8 +25,10 @@ export function Text({ children, style, as: Tag = "p" }: TextProps) {
 				fontSize: "16px",
 				lineHeight: "1.5",
 				color: "#333333",
+				...cjkStyle,
 				...style,
 			}}
+			{...(locale ? { lang: locale } : {})}
 		>
 			{children}
 		</Tag>

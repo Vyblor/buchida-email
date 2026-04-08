@@ -4,14 +4,17 @@ export interface ButtonProps {
 	href: string;
 	children: string;
 	style?: CSSProperties;
+	locale?: string;
 }
 
-export function Button({ href, children, style }: ButtonProps) {
+export function Button({ href, children, style, locale }: ButtonProps) {
 	const bgColor = style?.backgroundColor ?? "#3B6EF9";
 	const radius = style?.borderRadius ?? "6px";
 
 	return (
-		<table role="presentation" cellPadding={0} cellSpacing={0} align="center" style={{ margin: "0 auto" }}>
+		<table role="presentation" cellPadding={0} cellSpacing={0} align="center" style={{ margin: "0 auto" }}
+			{...(locale ? { lang: locale } : {})}
+		>
 			<tbody>
 				<tr>
 					<td

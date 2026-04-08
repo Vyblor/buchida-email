@@ -1,12 +1,62 @@
 import type { ReactElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 
+export interface RenderOptions {
+	/** Indent HTML output (default: false) */
+	pretty?: boolean;
+	/** Remove unnecessary whitespace (default: false) */
+	minify?: boolean;
+}
+
 /**
  * Render a React email element to an HTML string with DOCTYPE.
  */
-export function render(element: ReactElement): string {
+export function render(element: ReactElement, options?: RenderOptions): string {
 	const markup = renderToStaticMarkup(element);
-	return `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">\n${markup}`;
+	const doctype =
+		'<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">';
+
+	let html = `${doctype}\n${markup}`;
+
+	// Process MSO conditional comments
+	html = processMsoConditionals(html);
+
+	if (options?.minify) {
+		html = html.replace(/\n\s*/g, "").replace(/>\s+</g, "><");
+	}
+
+	if (options?.pretty) {
+		html = prettyPrintHtml(html);
+	}
+
+	return html;
+}
+
+/**
+ * Replace MSO marker elements with Outlook conditional comments.
+ * Templates use: <mso-conditional>fallback HTML here</mso-conditional>
+ * Output: <!--[if mso]>fallback HTML here<![endif]-->
+ */
+function processMsoConditionals(html: string): string {
+	return html
+		.replace(/<mso-conditional>/g, "<!--[if mso]>")
+		.replace(/<\/mso-conditional>/g, "<![endif]-->")
+		.replace(/<mso-hide>/g, "<!--[if !mso]><!-->" )
+		.replace(/<\/mso-hide>/g, "<!--<![endif]-->");
+}
+
+function prettyPrintHtml(html: string): string {
+	let indent = 0;
+	return html
+		.replace(/(>)(<)/g, "$1\n$2")
+		.split("\n")
+		.map((line) => {
+			if (line.match(/^<\//)) indent--;
+			const indented = "  ".repeat(Math.max(0, indent)) + line.trim();
+			if (line.match(/^<[^/]/) && !line.match(/\/>/)) indent++;
+			return indented;
+		})
+		.join("\n");
 }
 
 /**

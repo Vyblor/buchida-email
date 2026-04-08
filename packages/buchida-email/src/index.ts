@@ -12,3 +12,8 @@ export { Link, type LinkProps } from "./components/link.js";
 export { Image, type ImageProps } from "./components/image.js";
 export { Hr, type HrProps } from "./components/hr.js";
 export { Preview, type PreviewProps } from "./components/preview.js";
+export { Font, type FontProps } from "./components/font.js";
+export { Markdown, type MarkdownProps } from "./components/markdown.js";
+export { CodeBlock, type CodeBlockProps, CodeInline, type CodeInlineProps } from "./components/code.js";
+export { Divider, type DividerProps } from "./components/divider.js";
+export { MsoConditional, MsoHide } from "./components/mso.js";

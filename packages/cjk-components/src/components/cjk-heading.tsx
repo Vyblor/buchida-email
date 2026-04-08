@@ -18,6 +18,7 @@ const defaultSizes: Record<string, string> = {
 };
 
 const letterSpacing: Record<CJKLocale, string> = {
+	en: "0",
 	ko: "0.02em",
 	ja: "0.05em",
 	zh: "0.03em",
