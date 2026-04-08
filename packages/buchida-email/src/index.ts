@@ -24,3 +24,10 @@ export { AddressBlock, type AddressBlockProps } from "./components/address-block
 export { UnsubscribeFooter, type UnsubscribeFooterProps } from "./components/unsubscribe-footer.js";
 export { QRCode, type QRCodeProps } from "./components/qr-code.js";
 export { SocialLinks, type SocialLinksProps, type SocialLink, type SocialPlatform } from "./components/social-links.js";
+
+// Compound components (Phase 5)
+export { Receipt, type ReceiptProps, type ReceiptItem, type ReceiptCurrency } from "./components/receipt.js";
+export { WelcomeHero, type WelcomeHeroProps } from "./components/welcome-hero.js";
+export { PricingTable, type PricingTableProps, type PricingPlan } from "./components/pricing-table.js";
+export { NewsletterHeader, type NewsletterHeaderProps } from "./components/newsletter-header.js";
+export { NotificationCard, type NotificationCardProps } from "./components/notification-card.js";

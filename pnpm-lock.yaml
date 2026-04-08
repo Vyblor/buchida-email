@@ -87,6 +87,12 @@ importers:
         specifier: ^5.0.0
         version: 5.9.3
 
+  packages/compat:
+    devDependencies:
+      vitest:
+        specifier: ^3.0.0
+        version: 3.2.4(@types/node@22.19.15)(tsx@4.21.0)
+
   packages/preview:
     dependencies:
       '@buchida/render':
@@ -143,6 +149,81 @@ importers:
         specifier: ^5.0.0
         version: 5.9.3
 
+  templates/event-invitation:
+    dependencies:
+      '@buchida/cjk-components':
+        specifier: workspace:*
+        version: link:../../packages/cjk-components
+      '@buchida/email':
+        specifier: workspace:*
+        version: link:../../packages/buchida-email
+      react:
+        specifier: ^19.0.0
+        version: 19.2.4
+    devDependencies:
+      '@buchida/render':
+        specifier: workspace:*
+        version: link:../../packages/render
+      '@types/react':
+        specifier: ^19.0.0
+        version: 19.2.14
+      typescript:
+        specifier: ^5.8.3
+        version: 5.9.3
+      vitest:
+        specifier: ^3.1.1
+        version: 3.2.4(@types/node@22.19.15)(tsx@4.21.0)
+
+  templates/feedback-request:
+    dependencies:
+      '@buchida/cjk-components':
+        specifier: workspace:*
+        version: link:../../packages/cjk-components
+      '@buchida/email':
+        specifier: workspace:*
+        version: link:../../packages/buchida-email
+      react:
+        specifier: ^19.0.0
+        version: 19.2.4
+    devDependencies:
+      '@buchida/render':
+        specifier: workspace:*
+        version: link:../../packages/render
+      '@types/react':
+        specifier: ^19.0.0
+        version: 19.2.14
+      typescript:
+        specifier: ^5.8.3
+        version: 5.9.3
+      vitest:
+        specifier: ^3.1.1
+        version: 3.2.4(@types/node@22.19.15)(tsx@4.21.0)
+
+  templates/invoice:
+    dependencies:
+      '@buchida/cjk-components':
+        specifier: workspace:*
+        version: link:../../packages/cjk-components
+      '@buchida/email':
+        specifier: workspace:*
+        version: link:../../packages/buchida-email
+      react:
+        specifier: ^19.0.0
+        version: 19.2.4
+    devDependencies:
+      '@buchida/render':
+        specifier: workspace:*
+        version: link:../../packages/render
+      '@types/react':
+        specifier: ^19.0.0
+        version: 19.2.14
+      typescript:
+        specifier: ^5.8.3
+        version: 5.9.3
+      vitest:
+        specifier: ^3.1.1
+        version: 3.2.4(@types/node@22.19.15)(tsx@4.21.0)
+
   templates/magic-link:
     dependencies:
       '@buchida/cjk-components':
@@ -158,6 +239,31 @@ importers:
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
+
+  templates/newsletter:
+    dependencies:
+      '@buchida/cjk-components':
+        specifier: workspace:*
+        version: link:../../packages/cjk-components
+      '@buchida/email':
+        specifier: workspace:*
+        version: link:../../packages/buchida-email
+      react:
+        specifier: ^19.0.0
+        version: 19.2.4
+    devDependencies:
+      '@buchida/render':
+        specifier: workspace:*
+        version: link:../../packages/render
+      '@types/react':
+        specifier: ^19.0.0
+        version: 19.2.14
+      typescript:
+        specifier: ^5.8.3
+        version: 5.9.3
+      vitest:
+        specifier: ^3.1.1
+        version: 3.2.4(@types/node@22.19.15)(tsx@4.21.0)
 
   templates/newsletter-ja:
     dependencies:
@@ -182,6 +288,31 @@ importers:
         version: 19.2.4(react@19.2.4)
       vitest:
         specifier: ^3.0.0
+        version: 3.2.4(@types/node@22.19.15)(tsx@4.21.0)
+
+  templates/password-reset:
+    dependencies:
+      '@buchida/cjk-components':
+        specifier: workspace:*
+        version: link:../../packages/cjk-components
+      '@buchida/email':
+        specifier: workspace:*
+        version: link:../../packages/buchida-email
+      react:
+        specifier: ^19.0.0
+        version: 19.2.4
+    devDependencies:
+      '@buchida/render':
+        specifier: workspace:*
+        version: link:../../packages/render
+      '@types/react':
+        specifier: ^19.0.0
+        version: 19.2.14
+      typescript:
+        specifier: ^5.8.3
+        version: 5.9.3
+      vitest:
+        specifier: ^3.1.1
         version: 3.2.4(@types/node@22.19.15)(tsx@4.21.0)
 
   templates/password-reset-en:
@@ -284,6 +415,31 @@ importers:
         specifier: ^3.0.0
         version: 3.2.4(@types/node@22.19.15)(tsx@4.21.0)
 
+  templates/product-update:
+    dependencies:
+      '@buchida/cjk-components':
+        specifier: workspace:*
+        version: link:../../packages/cjk-components
+      '@buchida/email':
+        specifier: workspace:*
+        version: link:../../packages/buchida-email
+      react:
+        specifier: ^19.0.0
+        version: 19.2.4
+    devDependencies:
+      '@buchida/render':
+        specifier: workspace:*
+        version: link:../../packages/render
+      '@types/react':
+        specifier: ^19.0.0
+        version: 19.2.14
+      typescript:
+        specifier: ^5.8.3
+        version: 5.9.3
+      vitest:
+        specifier: ^3.1.1
+        version: 3.2.4(@types/node@22.19.15)(tsx@4.21.0)
+
   templates/receipt-ko:
     dependencies:
       '@buchida/cjk-components':
@@ -359,6 +515,31 @@ importers:
         specifier: ^3.0.0
         version: 3.2.4(@types/node@22.19.15)(tsx@4.21.0)
 
+  templates/shipping-notification:
+    dependencies:
+      '@buchida/cjk-components':
+        specifier: workspace:*
+        version: link:../../packages/cjk-components
+      '@buchida/email':
+        specifier: workspace:*
+        version: link:../../packages/buchida-email
+      react:
+        specifier: ^19.0.0
+        version: 19.2.4
+    devDependencies:
+      '@buchida/render':
+        specifier: workspace:*
+        version: link:../../packages/render
+      '@types/react':
+        specifier: ^19.0.0
+        version: 19.2.14
+      typescript:
+        specifier: ^5.8.3
+        version: 5.9.3
+      vitest:
+        specifier: ^3.1.1
+        version: 3.2.4(@types/node@22.19.15)(tsx@4.21.0)
+
   templates/shipping-zh:
     dependencies:
       '@buchida/cjk-components':
@@ -382,6 +563,31 @@ importers:
         version: 19.2.4(react@19.2.4)
       vitest:
         specifier: ^3.0.0
+        version: 3.2.4(@types/node@22.19.15)(tsx@4.21.0)
+
+  templates/verify-email:
+    dependencies:
+      '@buchida/cjk-components':
+        specifier: workspace:*
+        version: link:../../packages/cjk-components
+      '@buchida/email':
+        specifier: workspace:*
+        version: link:../../packages/buchida-email
+      react:
+        specifier: ^19.0.0
+        version: 19.2.4
+    devDependencies:
+      '@buchida/render':
+        specifier: workspace:*
+        version: link:../../packages/render
+      '@types/react':
+        specifier: ^19.0.0
+        version: 19.2.14
+      typescript:
+        specifier: ^5.8.3
+        version: 5.9.3
+      vitest:
+        specifier: ^3.1.1
         version: 3.2.4(@types/node@22.19.15)(tsx@4.21.0)
 
   templates/verify-email-en:
