@@ -1,0 +1,35 @@
+{
+	"name": "@buchida/email-compat",
+	"version": "0.1.0",
+	"description": "Email client CSS compatibility database and checker for @buchida/email",
+	"type": "module",
+	"main": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.js"
+		}
+	},
+	"scripts": {
+		"build": "tsc",
+		"test": "vitest run",
+		"test:watch": "vitest",
+		"clean": "rm -rf dist"
+	},
+	"devDependencies": {
+		"vitest": "^3.0.0"
+	},
+	"files": ["dist", "README.md"],
+	"keywords": ["email", "buchida", "compatibility", "email-client", "cjk"],
+	"author": "buchida <hello@buchida.com>",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Vyblor/buchida-email.git"
+	},
+	"homepage": "https://buchida.com/docs/templates",
+	"engines": {
+		"node": ">=18.0.0"
+	}
+}
