@@ -1,7 +1,7 @@
 {
-	"name": "@buchida/email",
-	"version": "0.2.1",
-	"description": "CJK-first email components for building beautiful emails",
+	"name": "@buchida/tailwind",
+	"version": "0.1.0",
+	"description": "Tailwind CSS utility inliner for @buchida/email components",
 	"type": "module",
 	"main": "./dist/index.js",
 	"types": "./dist/index.d.ts",
@@ -13,24 +13,14 @@
 	},
 	"scripts": {
 		"build": "tsc",
-		"test": "vitest run",
-		"test:watch": "vitest",
 		"clean": "rm -rf dist"
 	},
-	"dependencies": {
-		"react": "^19.0.0"
-	},
 	"devDependencies": {
-		"@types/react": "^19.0.0",
-		"react-dom": "^19.0.0",
-		"@types/react-dom": "^19.0.0",
-		"vitest": "^3.0.0"
-	},
-	"peerDependencies": {
-		"react": "^19.0.0"
+		"@types/node": "^20.0.0",
+		"typescript": "^5.0.0"
 	},
 	"files": ["dist", "README.md"],
-	"keywords": ["email", "buchida", "cjk", "react-email", "korean", "japanese", "chinese", "templates"],
+	"keywords": ["email", "buchida", "tailwind", "css", "inline"],
 	"author": "buchida <hello@buchida.com>",
 	"license": "MIT",
 	"repository": {

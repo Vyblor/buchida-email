@@ -1,6 +1,6 @@
 {
 	"name": "@buchida/cjk-components",
-	"version": "0.2.0",
+	"version": "0.2.1",
 	"description": "CJK-specific email components with proper font rendering and locale support",
 	"type": "module",
 	"main": "./dist/index.js",

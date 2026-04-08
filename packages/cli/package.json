@@ -1,10 +1,13 @@
 {
-	"name": "@buchida/email",
-	"version": "0.2.1",
-	"description": "CJK-first email components for building beautiful emails",
+	"name": "@buchida/email-cli",
+	"version": "0.1.0",
+	"description": "CLI for @buchida/email — dev server, build, and export commands",
 	"type": "module",
 	"main": "./dist/index.js",
 	"types": "./dist/index.d.ts",
+	"bin": {
+		"buchida-email": "./dist/index.js"
+	},
 	"exports": {
 		".": {
 			"types": "./dist/index.d.ts",
@@ -13,24 +16,18 @@
 	},
 	"scripts": {
 		"build": "tsc",
-		"test": "vitest run",
-		"test:watch": "vitest",
 		"clean": "rm -rf dist"
 	},
 	"dependencies": {
-		"react": "^19.0.0"
+		"@buchida/preview": "workspace:*",
+		"@buchida/render": "workspace:*"
 	},
 	"devDependencies": {
-		"@types/react": "^19.0.0",
-		"react-dom": "^19.0.0",
-		"@types/react-dom": "^19.0.0",
-		"vitest": "^3.0.0"
-	},
-	"peerDependencies": {
-		"react": "^19.0.0"
+		"@types/node": "^20.0.0",
+		"typescript": "^5.0.0"
 	},
 	"files": ["dist", "README.md"],
-	"keywords": ["email", "buchida", "cjk", "react-email", "korean", "japanese", "chinese", "templates"],
+	"keywords": ["email", "buchida", "cli", "cjk", "templates"],
 	"author": "buchida <hello@buchida.com>",
 	"license": "MIT",
 	"repository": {
