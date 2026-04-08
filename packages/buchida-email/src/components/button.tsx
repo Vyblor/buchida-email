@@ -7,14 +7,20 @@ export interface ButtonProps {
 }
 
 export function Button({ href, children, style }: ButtonProps) {
+	const bgColor = style?.backgroundColor ?? "#3B6EF9";
+	const radius = style?.borderRadius ?? "6px";
+
 	return (
-		<table role="presentation" cellPadding={0} cellSpacing={0}>
+		<table role="presentation" cellPadding={0} cellSpacing={0} align="center" style={{ margin: "0 auto" }}>
 			<tbody>
 				<tr>
 					<td
+						align="center"
 						style={{
-							borderRadius: "6px",
-							backgroundColor: "#3B6EF9",
+							borderRadius: radius,
+							backgroundColor: bgColor,
+							border: style?.border,
+							boxShadow: style?.boxShadow,
 						}}
 					>
 						<a
@@ -26,8 +32,9 @@ export function Button({ href, children, style }: ButtonProps) {
 								fontWeight: "bold",
 								color: "#ffffff",
 								textDecoration: "none",
-								borderRadius: "6px",
-								backgroundColor: "#3B6EF9",
+								textAlign: "center" as const,
+								borderRadius: radius,
+								backgroundColor: bgColor,
 								...style,
 							}}
 						>
