@@ -1,6 +1,6 @@
 {
 	"name": "@buchida/render",
-	"version": "0.2.1",
+	"version": "0.3.0",
 	"description": "Server-side render React email components to HTML and plain text",
 	"type": "module",
 	"main": "./dist/index.js",
