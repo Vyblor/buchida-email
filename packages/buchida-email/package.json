@@ -1,6 +1,6 @@
 {
 	"name": "@buchida/email",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"description": "CJK-first email components for building beautiful emails",
 	"type": "module",
 	"main": "./dist/index.js",
