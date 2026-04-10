@@ -1,6 +1,6 @@
 {
 	"name": "@buchida/email",
-	"version": "0.3.0",
+	"version": "0.3.1",
 	"description": "React Email component library with native CJK support. Korean, Japanese, and Chinese fonts rendered correctly across email clients.",
 	"type": "module",
 	"main": "./dist/index.js",
