@@ -1,21 +1,23 @@
 # @buchida/email
 
-CJK-first email components for building beautiful, international emails.
+**buchida Email Templates — CJK-native React Email components**
 
-Built by [buchida](https://buchida.com) — Email API for Asia & Beyond.
-
-## Why @buchida/email?
-
-- **CJK-first**: Built-in support for Korean, Japanese, and Chinese with proper fonts, line-height, and letter-spacing
-- **Email-safe**: All components render to email client compatible HTML (Gmail, Outlook, Naver Mail, Apple Mail)
-- **Locale-aware**: Pass `locale` to any component for automatic CJK font loading and text optimization
-- **MSO support**: Outlook conditional comments via `MsoConditional`/`MsoHide` components
-- **Lightweight**: Zero runtime dependencies (peer deps: react)
+@buchida/email is the React Email component library with native CJK support for **buchida** — an email API built for AI agents. Built-in support for Korean, Japanese, and Chinese with proper fonts, line-height, and letter-spacing. All components render to email client compatible HTML (Gmail, Outlook, Naver Mail, Apple Mail).
 
 ## Install
 
 ```bash
 npm install @buchida/email
+```
+
+## Send your first email
+
+```tsx
+import { renderBuchidaEmail, WelcomeTemplate } from '@buchida/email';
+
+const html = renderBuchidaEmail(<WelcomeTemplate name="안녕하세요" locale="ko" />);
+
+// Pass to buchida.emails.send or any SMTP client
 ```
 
 ## Components
@@ -113,97 +115,13 @@ import { MsoConditional, MsoHide, Container } from "@buchida/email";
 
 The `render()` function from `@buchida/render` automatically converts these into proper `<!--[if mso]>` conditional comments.
 
-## All Components
+## Documentation
 
-### Layout
+Full docs: **[buchida.com/docs](https://buchida.com/docs)**
 
-```tsx
-import { Email, Head, Body, Container, Section, Row, Column } from "@buchida/email";
-
-<Email locale="ko">
-  <Head />
-  <Body style={{ backgroundColor: "#ffffff" }}>
-    <Container>
-      <Section>
-        <Row>
-          <Column>Left</Column>
-          <Column>Right</Column>
-        </Row>
-      </Section>
-    </Container>
-  </Body>
-</Email>
-```
-
-### Typography
-
-```tsx
-import { Text, Heading, Link } from "@buchida/email";
-
-<Heading as="h1" locale="ko">제목</Heading>
-<Text locale="ko">본문 텍스트입니다.</Text>
-<Link href="https://buchida.com">링크</Link>
-```
-
-### Interactive
-
-```tsx
-import { Button } from "@buchida/email";
-
-<Button href="https://buchida.com/dashboard" locale="ko">
-  대시보드로 이동
-</Button>
-```
-
-### Code
-
-```tsx
-import { CodeBlock, CodeInline } from "@buchida/email";
-
-<CodeBlock>
-  {`npm install @buchida/email`}
-</CodeBlock>
-
-<Text>
-  Run <CodeInline>npm install</CodeInline> to get started.
-</Text>
-```
-
-### Utilities
-
-```tsx
-import { Preview, Hr, Divider, Image, Font } from "@buchida/email";
-
-// Preview text shown in inbox (hidden in email body)
-<Preview>Welcome to buchida — your emails are ready to send.</Preview>
-
-// Horizontal rule
-<Hr />
-<Divider />  {/* alias for Hr */}
-
-// Responsive image
-<Image src="https://buchida.com/logo.png" alt="buchida" width={120} height={40} />
-
-// Font loading
-<Font families={["Space Grotesk"]} locale="en" />
-```
-
-### Markdown
-
-```tsx
-import { Markdown } from "@buchida/email";
-
-<Markdown>
-  {`
-# Hello
-
-This is **bold** and this is _italic_.
-
-- Item one
-- Item two
-  `}
-</Markdown>
-```
+- CJK email templates: https://buchida.com/docs/templates
+- API reference: https://buchida.com/docs/api-reference
+- Quickstart guide: https://buchida.com/docs/quickstart
 
 ## License
 

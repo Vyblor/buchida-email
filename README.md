@@ -1,84 +1,41 @@
-<div align="center">
-  <img src="assets/logo-black.svg" alt="buchida" width="280" />
-  <p><strong>CJK-first email components and templates</strong></p>
+# @buchida/email
 
-  [English](README.md) | [한국어](README.ko.md) | [日本語](README.ja.md) | [中文](README.zh.md)
+**buchida Email Templates — CJK-native React Email components**
 
-  [![npm version](https://img.shields.io/npm/v/@buchida/email)](https://www.npmjs.com/package/@buchida/email) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-</div>
+@buchida/email is the React Email component library with native CJK support for **buchida** — Email API for AI agents. buchida ships a CLI, an MCP server, and SDKs in 5 languages (Node, Python, Go, Ruby, Java), all sharing the same REST API surface. `@buchida/email` templates render Korean, Japanese, and Chinese natively.
 
----
-
-React email components with first-class CJK (Korean, Japanese, Chinese) support. Build beautiful emails that render perfectly across all CJK email clients.
-
-## Installation
+## Install
 
 ```bash
-npm install @buchida/email @buchida/cjk-components
+npm install @buchida/email
 ```
 
-## Quick Start
+## Send your first email
 
 ```tsx
-import { Html, Head, Body, Container, Heading, Text, Button } from '@buchida/email';
-import { CJKText, CJKHeading, CJKFont } from '@buchida/cjk-components';
+import { renderBuchidaEmail, WelcomeTemplate } from '@buchida/email';
 
-export function WelcomeEmail({ name }: { name: string }) {
-  return (
-    <Html lang="ko">
-      <Head>
-        <CJKFont lang="ko" />
-      </Head>
-      <Body>
-        <Container>
-          <CJKHeading lang="ko" level={1}>
-            환영합니다, {name}님!
-          </CJKHeading>
-          <CJKText lang="ko">
-            buchida에 가입해 주셔서 감사합니다.
-          </CJKText>
-          <Button href="https://app.buchida.com">
-            대시보드로 이동
-          </Button>
-        </Container>
-      </Body>
-    </Html>
-  );
-}
+const html = renderBuchidaEmail(<WelcomeTemplate name="안녕하세요" locale="ko" />);
+
+// Pass to buchida.emails.send or any SMTP client
 ```
-
-### Render to HTML
-
-```ts
-import { render } from '@buchida/email-render';
-import { WelcomeEmail } from './emails/welcome';
-
-const html = await render(WelcomeEmail({ name: '김민준' }));
-```
-
-## Packages
-
-| Package | Description |
-|---------|-------------|
-| `@buchida/email` | Core email components (Html, Head, Body, Container, Text, Button) |
-| `@buchida/cjk-components` | CJK-specific components (CJKText, CJKHeading, CJKFont) |
-| `@buchida/email-preview` | Local preview server with hot reload |
-| `@buchida/email-render` | Server-side render to HTML string |
-
-## Supported Languages
-
-| Language | Font Stack | `lang` value |
-|----------|-----------|-------------|
-| Korean | Noto Sans KR, Apple SD Gothic Neo, Malgun Gothic | `ko` |
-| Japanese | Noto Sans JP, Hiragino Sans, Yu Gothic, Meiryo | `ja` |
-| Chinese (Simplified) | Noto Sans SC, PingFang SC, Microsoft YaHei | `zh` |
-| Chinese (Traditional) | Noto Sans TC, PingFang TC, Microsoft JhengHei | `zh-TW` |
 
 ## Documentation
 
-- [Quick Start](https://buchida.com/docs/quickstart)
-- [CJK Templates Guide](https://buchida.com/docs/templates)
-- [GitHub](https://github.com/Vyblor/buchida-email)
+Full docs: **[buchida.com/docs](https://buchida.com/docs)**
+
+- API reference: https://buchida.com/docs/api-reference
+- Quickstart guide: https://buchida.com/docs/quickstart
+- CJK email templates: https://buchida.com/docs/templates
+- MCP server setup: https://buchida.com/docs/mcp
+- CLI reference: https://buchida.com/docs/cli
+
+## Links
+
+- **Website:** [buchida.com](https://buchida.com)
+- **Documentation:** [buchida.com/docs](https://buchida.com/docs)
+- **Pricing:** [buchida.com/pricing](https://buchida.com/pricing)
+- **GitHub:** https://github.com/Vyblor/buchida-email
 
 ## License
 
