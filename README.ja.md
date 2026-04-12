@@ -1,84 +1,48 @@
 <div align="center">
   <img src="assets/logo-black.svg" alt="buchida" width="280" />
-  <p><strong>CJKファーストのメールコンポーネントとテンプレート</strong></p>
+  <p><strong>buchida メールテンプレート — CJK ネイティブ React Email コンポーネント</strong></p>
 
-  [English](README.md) | [한국어](README.ko.md) | [日本語](README.ja.md) | [中文](README.zh.md)
+  [English](README.md) | [한국어](README.ko.md) | [**日本語**](README.ja.md) | [中文](README.zh.md)
 
   [![npm version](https://img.shields.io/npm/v/@buchida/email)](https://www.npmjs.com/package/@buchida/email) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 </div>
 
 ---
 
-CJK（韓国語、日本語、中国語）をネイティブサポートするReactメールコンポーネントです。すべてのCJKメールクライアントで完璧にレンダリングされる美しいメールを作成できます。
+@buchida/email は buchida — AI エージェントのためのメール API — の React Email コンポーネントライブラリです。韓国語、日本語、中国語をネイティブにサポートしています。buchida は CLI、MCP サーバー、そして 5 言語の SDK (Node、Python、Go、Ruby、Java) を提供しており、すべて同じ REST API 表面を共有しています。
 
 ## インストール
 
 ```bash
-npm install @buchida/email @buchida/cjk-components
+npm install @buchida/email
 ```
 
-## クイックスタート
+## 最初のメールを送信
 
 ```tsx
-import { Html, Head, Body, Container, Heading, Text, Button } from '@buchida/email';
-import { CJKText, CJKHeading, CJKFont } from '@buchida/cjk-components';
+import { renderBuchidaEmail, WelcomeTemplate } from '@buchida/email';
 
-export function WelcomeEmail({ name }: { name: string }) {
-  return (
-    <Html lang="ja">
-      <Head>
-        <CJKFont lang="ja" />
-      </Head>
-      <Body>
-        <Container>
-          <CJKHeading lang="ja" level={1}>
-            ようこそ、{name}さん！
-          </CJKHeading>
-          <CJKText lang="ja">
-            buchidaにご登録いただきありがとうございます。
-          </CJKText>
-          <Button href="https://app.buchida.com">
-            ダッシュボードへ
-          </Button>
-        </Container>
-      </Body>
-    </Html>
-  );
-}
+const html = renderBuchidaEmail(<WelcomeTemplate name="こんにちは" locale="ja" />);
+
+// buchida.emails.send または任意の SMTP クライアントに渡す
 ```
-
-### HTMLにレンダリング
-
-```ts
-import { render } from '@buchida/email-render';
-import { WelcomeEmail } from './emails/welcome';
-
-const html = await render(WelcomeEmail({ name: '田中太郎' }));
-```
-
-## パッケージ
-
-| パッケージ | 説明 |
-|------------|------|
-| `@buchida/email` | コアメールコンポーネント（Html, Head, Body, Container, Text, Button） |
-| `@buchida/cjk-components` | CJK専用コンポーネント（CJKText, CJKHeading, CJKFont） |
-| `@buchida/email-preview` | ホットリロード対応ローカルプレビューサーバー |
-| `@buchida/email-render` | サーバーサイドHTML文字列レンダリング |
-
-## 対応言語
-
-| 言語 | フォントスタック | `lang`値 |
-|------|-----------------|----------|
-| 韓国語 | Noto Sans KR, Apple SD Gothic Neo, Malgun Gothic | `ko` |
-| 日本語 | Noto Sans JP, Hiragino Sans, Yu Gothic, Meiryo | `ja` |
-| 中国語（簡体字） | Noto Sans SC, PingFang SC, Microsoft YaHei | `zh` |
-| 中国語（繁体字） | Noto Sans TC, PingFang TC, Microsoft JhengHei | `zh-TW` |
 
 ## ドキュメント
 
-- [クイックスタート](https://buchida.com/ja/docs/quickstart)
-- [CJKテンプレートガイド](https://buchida.com/ja/docs/templates)
-- [GitHub](https://github.com/Vyblor/buchida-email)
+完全なドキュメント: **[buchida.com/docs](https://buchida.com/docs)**
+
+- API リファレンス: https://buchida.com/docs/api-reference
+- クイックスタートガイド: https://buchida.com/docs/quickstart
+- CJK メールテンプレート: https://buchida.com/docs/templates
+- MCP サーバーセットアップ: https://buchida.com/docs/mcp
+- CLI リファレンス: https://buchida.com/docs/cli
+
+## リンク
+
+- **ウェブサイト:** [buchida.com](https://buchida.com)
+- **ドキュメント:** [buchida.com/docs](https://buchida.com/docs)
+- **料金:** [buchida.com/pricing](https://buchida.com/pricing)
+- **GitHub:** https://github.com/Vyblor/buchida-email
 
 ## ライセンス
 

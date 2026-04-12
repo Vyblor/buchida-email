@@ -1,84 +1,48 @@
 <div align="center">
   <img src="assets/logo-black.svg" alt="buchida" width="280" />
-  <p><strong>CJK优先的邮件组件和模板</strong></p>
+  <p><strong>buchida 邮件模板 — CJK 原生 React Email 组件</strong></p>
 
-  [English](README.md) | [한국어](README.ko.md) | [日本語](README.ja.md) | [中文](README.zh.md)
+  [English](README.md) | [한국어](README.ko.md) | [日本語](README.ja.md) | [**中文**](README.zh.md)
 
   [![npm version](https://img.shields.io/npm/v/@buchida/email)](https://www.npmjs.com/package/@buchida/email) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 </div>
 
 ---
 
-原生支持CJK（韩文、日文、中文）的React邮件组件。构建在所有CJK邮件客户端中完美渲染的精美邮件。
+@buchida/email 是为 AI 代理打造的邮件 API buchida 的 React Email 组件库，原生支持韩语、日语和中文。buchida 提供 CLI、MCP 服务器和 5 种语言的 SDK (Node、Python、Go、Ruby、Java),所有这些都共享相同的 REST API 表面。
 
 ## 安装
 
 ```bash
-npm install @buchida/email @buchida/cjk-components
+npm install @buchida/email
 ```
 
-## 快速开始
+## 发送您的第一封邮件
 
 ```tsx
-import { Html, Head, Body, Container, Heading, Text, Button } from '@buchida/email';
-import { CJKText, CJKHeading, CJKFont } from '@buchida/cjk-components';
+import { renderBuchidaEmail, WelcomeTemplate } from '@buchida/email';
 
-export function WelcomeEmail({ name }: { name: string }) {
-  return (
-    <Html lang="zh">
-      <Head>
-        <CJKFont lang="zh" />
-      </Head>
-      <Body>
-        <Container>
-          <CJKHeading lang="zh" level={1}>
-            欢迎，{name}！
-          </CJKHeading>
-          <CJKText lang="zh">
-            感谢您注册buchida。
-          </CJKText>
-          <Button href="https://app.buchida.com">
-            前往控制台
-          </Button>
-        </Container>
-      </Body>
-    </Html>
-  );
-}
+const html = renderBuchidaEmail(<WelcomeTemplate name="你好" locale="zh" />);
+
+// 传递给 buchida.emails.send 或任何 SMTP 客户端
 ```
-
-### 渲染为HTML
-
-```ts
-import { render } from '@buchida/email-render';
-import { WelcomeEmail } from './emails/welcome';
-
-const html = await render(WelcomeEmail({ name: '张伟' }));
-```
-
-## 包
-
-| 包名 | 说明 |
-|------|------|
-| `@buchida/email` | 核心邮件组件（Html, Head, Body, Container, Text, Button） |
-| `@buchida/cjk-components` | CJK专用组件（CJKText, CJKHeading, CJKFont） |
-| `@buchida/email-preview` | 支持热重载的本地预览服务器 |
-| `@buchida/email-render` | 服务端HTML字符串渲染 |
-
-## 支持的语言
-
-| 语言 | 字体栈 | `lang`值 |
-|------|--------|----------|
-| 韩文 | Noto Sans KR, Apple SD Gothic Neo, Malgun Gothic | `ko` |
-| 日文 | Noto Sans JP, Hiragino Sans, Yu Gothic, Meiryo | `ja` |
-| 中文（简体） | Noto Sans SC, PingFang SC, Microsoft YaHei | `zh` |
-| 中文（繁体） | Noto Sans TC, PingFang TC, Microsoft JhengHei | `zh-TW` |
 
 ## 文档
 
-- [快速开始](https://buchida.com/zh/docs/quickstart)
-- [CJK模板指南](https://buchida.com/zh/docs/templates)
-- [GitHub](https://github.com/Vyblor/buchida-email)
+完整文档: **[buchida.com/docs](https://buchida.com/docs)**
+
+- API 参考: https://buchida.com/docs/api-reference
+- 快速入门指南: https://buchida.com/docs/quickstart
+- CJK 邮件模板: https://buchida.com/docs/templates
+- MCP 服务器设置: https://buchida.com/docs/mcp
+- CLI 参考: https://buchida.com/docs/cli
+
+## 链接
+
+- **网站:** [buchida.com](https://buchida.com)
+- **文档:** [buchida.com/docs](https://buchida.com/docs)
+- **定价:** [buchida.com/pricing](https://buchida.com/pricing)
+- **GitHub:** https://github.com/Vyblor/buchida-email
 
 ## 许可证
 

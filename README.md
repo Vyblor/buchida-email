@@ -1,6 +1,13 @@
-# @buchida/email
+<div align="center">
+  <img src="assets/logo-black.svg" alt="buchida" width="280" />
+  <p><strong>buchida Email Templates — CJK-native React Email components</strong></p>
 
-**buchida Email Templates — CJK-native React Email components**
+  [**English**](README.md) | [한국어](README.ko.md) | [日本語](README.ja.md) | [中文](README.zh.md)
+
+  [![npm version](https://img.shields.io/npm/v/@buchida/email)](https://www.npmjs.com/package/@buchida/email) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+</div>
+
+---
 
 @buchida/email is the React Email component library with native CJK support for **buchida** — Email API for AI agents. buchida ships a CLI, an MCP server, and SDKs in 5 languages (Node, Python, Go, Ruby, Java), all sharing the same REST API surface. `@buchida/email` templates render Korean, Japanese, and Chinese natively.
 
