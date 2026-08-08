@@ -17,10 +17,11 @@
 	"scripts": {
 		"build": "tsc",
 		"dev": "node --watch dist/cli.js",
-		"clean": "rm -rf dist"
+		"clean": "rm -rf dist",
+		"prepublishOnly": "node ../../scripts/check-publishable.mjs ."
 	},
 	"dependencies": {
-		"@buchida/render": "workspace:*",
+		"@buchida/render": "^0.3.0",
 		"react": "^19.0.0",
 		"react-dom": "^19.0.0"
 	},
@@ -29,6 +30,8 @@
 		"@types/react": "^19.0.0",
 		"@types/react-dom": "^19.0.0"
 	},
-	"files": ["dist"],
+	"files": [
+		"dist"
+	],
 	"license": "MIT"
 }

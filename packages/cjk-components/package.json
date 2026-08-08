@@ -1,6 +1,6 @@
 {
 	"name": "@buchida/cjk-components",
-	"version": "0.3.0",
+	"version": "0.3.1",
 	"description": "CJK-specific email components with proper font rendering and locale support",
 	"type": "module",
 	"main": "./dist/index.js",
@@ -15,10 +15,11 @@
 		"build": "tsc",
 		"test": "vitest run",
 		"test:watch": "vitest",
-		"clean": "rm -rf dist"
+		"clean": "rm -rf dist",
+		"prepublishOnly": "node ../../scripts/check-publishable.mjs ."
 	},
 	"dependencies": {
-		"@buchida/email": "workspace:*",
+		"@buchida/email": "^0.3.2",
 		"react": "^19.0.0"
 	},
 	"devDependencies": {
@@ -30,6 +31,9 @@
 	"peerDependencies": {
 		"react": "^19.0.0"
 	},
-	"files": ["dist", "README.md"],
+	"files": [
+		"dist",
+		"README.md"
+	],
 	"license": "MIT"
 }

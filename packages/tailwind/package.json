@@ -13,14 +13,24 @@
 	},
 	"scripts": {
 		"build": "tsc",
-		"clean": "rm -rf dist"
+		"clean": "rm -rf dist",
+		"prepublishOnly": "node ../../scripts/check-publishable.mjs ."
 	},
 	"devDependencies": {
 		"@types/node": "^20.0.0",
 		"typescript": "^5.0.0"
 	},
-	"files": ["dist", "README.md"],
-	"keywords": ["email", "buchida", "tailwind", "css", "inline"],
+	"files": [
+		"dist",
+		"README.md"
+	],
+	"keywords": [
+		"email",
+		"buchida",
+		"tailwind",
+		"css",
+		"inline"
+	],
 	"author": "buchida <hello@buchida.com>",
 	"license": "MIT",
 	"repository": {

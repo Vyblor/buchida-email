@@ -1,7 +1,7 @@
 {
 	"name": "@buchida/email-cli",
-	"version": "0.1.0",
-	"description": "CLI for @buchida/email — dev server, build, and export commands",
+	"version": "0.1.1",
+	"description": "CLI for @buchida/email \u2014 dev server, build, and export commands",
 	"type": "module",
 	"main": "./dist/index.js",
 	"types": "./dist/index.d.ts",
@@ -16,18 +16,28 @@
 	},
 	"scripts": {
 		"build": "tsc",
-		"clean": "rm -rf dist"
+		"clean": "rm -rf dist",
+		"prepublishOnly": "node ../../scripts/check-publishable.mjs ."
 	},
 	"dependencies": {
-		"@buchida/preview": "workspace:*",
-		"@buchida/render": "workspace:*"
+		"@buchida/preview": "^0.3.0",
+		"@buchida/render": "^0.3.0"
 	},
 	"devDependencies": {
 		"@types/node": "^20.0.0",
 		"typescript": "^5.0.0"
 	},
-	"files": ["dist", "README.md"],
-	"keywords": ["email", "buchida", "cli", "cjk", "templates"],
+	"files": [
+		"dist",
+		"README.md"
+	],
+	"keywords": [
+		"email",
+		"buchida",
+		"cli",
+		"cjk",
+		"templates"
+	],
 	"author": "buchida <hello@buchida.com>",
 	"license": "MIT",
 	"repository": {

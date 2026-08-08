@@ -15,7 +15,8 @@
 		"build": "tsc",
 		"test": "vitest run",
 		"test:watch": "vitest",
-		"clean": "rm -rf dist"
+		"clean": "rm -rf dist",
+		"prepublishOnly": "node ../../scripts/check-publishable.mjs ."
 	},
 	"dependencies": {
 		"react": "^19.0.0"
@@ -29,8 +30,20 @@
 	"peerDependencies": {
 		"react": "^19.0.0"
 	},
-	"files": ["dist", "README.md"],
-	"keywords": ["email", "buchida", "cjk", "react-email", "korean", "japanese", "chinese", "templates"],
+	"files": [
+		"dist",
+		"README.md"
+	],
+	"keywords": [
+		"email",
+		"buchida",
+		"cjk",
+		"react-email",
+		"korean",
+		"japanese",
+		"chinese",
+		"templates"
+	],
 	"author": "buchida <hello@buchida.com>",
 	"license": "MIT",
 	"repository": {

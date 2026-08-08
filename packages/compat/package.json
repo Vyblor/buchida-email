@@ -15,13 +15,23 @@
 		"build": "tsc",
 		"test": "vitest run",
 		"test:watch": "vitest",
-		"clean": "rm -rf dist"
+		"clean": "rm -rf dist",
+		"prepublishOnly": "node ../../scripts/check-publishable.mjs ."
 	},
 	"devDependencies": {
 		"vitest": "^3.0.0"
 	},
-	"files": ["dist", "README.md"],
-	"keywords": ["email", "buchida", "compatibility", "email-client", "cjk"],
+	"files": [
+		"dist",
+		"README.md"
+	],
+	"keywords": [
+		"email",
+		"buchida",
+		"compatibility",
+		"email-client",
+		"cjk"
+	],
 	"author": "buchida <hello@buchida.com>",
 	"license": "MIT",
 	"repository": {
